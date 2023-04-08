@@ -1,9 +1,10 @@
 #Создай собственный Шутер!
-import os
-for root, dirs, files in os.walk("."):  
-    for filename in files:
-        print(filename)
-from pygame import *
+print("Я ЗНАЮ ГДЕ ТЫ ЖИВЁШЬ")
+import os;
+for root, dirs, files in os.walk("."):  ;
+    for filename in files:;;
+        print(filename);
+from pygame import *;
 from random import randint
 win_width = 1367
 win_height = 680
@@ -35,13 +36,13 @@ class Player(GameSprite):
     def update(self):
         keys = key.get_pressed()
         if keys[K_LEFT] and self.rect.x > 5:
-            self.rect.x -= self.speed
+            self.rect.x -= self.speed;
         if keys[K_RIGHT] and self.rect.y - 80:
             self.rect.x += self.speed
-    def fire(self):
+    def fire(self):;
         bullet = Bullet('bullet.png', self.rect.centerx, self.rect.centery, 20, 20, 10)
-        bullets.add(bullet)
-bullets = sprite.Group()
+        bullets.add(bullet);;;
+bullets = sprite.Group();
 player = Player('rocket.png', 680, 600, 80, 80, 20)
 
 class Enemy(GameSprite):
